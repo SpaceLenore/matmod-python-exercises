@@ -13,7 +13,7 @@ help:
 
 # target: clear-cache             - clearing the cache
 .PHONY:  clear-cache
-clean-cache:
+clear-cache:
 	@echo "removing ./*/__pycache__"
 	@rm -rf ./*/__pycache__
 	@echo "All done!"
@@ -22,4 +22,4 @@ clean-cache:
 # target: test                    - running python unittest
 .PHONY:  test
 test:
-	@cd 01 && python3 -m unittest -v exercises01test
+	coverage run 01/exercises01test.py

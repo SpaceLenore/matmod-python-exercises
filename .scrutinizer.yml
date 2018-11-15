@@ -9,3 +9,7 @@ build:
       tests:
         override:
           - py-scrutinizer-run
+          - command: 'make test'
+            coverage:
+              file: '.coverage'
+              format: 'py-cc'
