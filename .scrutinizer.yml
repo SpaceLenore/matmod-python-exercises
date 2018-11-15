@@ -4,13 +4,13 @@ checks:
         duplicate_code: true
 
 build:
+  dependencies:
+    before:
+      -
+        command: "pip install coverage"
   nodes:
     analysis:
       tests:
-        dependencies:
-          before:
-            -
-                command: "pip install coverage"
         override:
           - py-scrutinizer-run
           - command: 'make test'
