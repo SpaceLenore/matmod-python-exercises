@@ -7,6 +7,10 @@ build:
   nodes:
     analysis:
       tests:
+        dependencies:
+          before:
+            -
+                command: "pip install coverage"
         override:
           - py-scrutinizer-run
           - command: 'make test'
