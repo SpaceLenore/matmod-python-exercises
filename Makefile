@@ -27,5 +27,6 @@ install:
 # target: test                    - running python unittest
 .PHONY:  test
 test:
-	coverage run 01/exercises01test.py
-	coverage --append run 02/exercises02test.py
+	cd 01 && coverage run exercises01test.py
+	cd 02 && coverage run exercises02test.py
+	coverage combine 01/.coverage 02/.coverage
