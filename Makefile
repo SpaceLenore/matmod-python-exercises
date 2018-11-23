@@ -28,4 +28,4 @@ install:
 .PHONY:  test
 test:
 	coverage run 01/exercises01test.py
-	coverage run 02/exercises02test.py
+	coverage --append run 02/exercises02test.py
