@@ -7,7 +7,7 @@ build:
   dependencies:
     before:
       -
-        command: "pip install coverage"
+        command: "make install"
   nodes:
     analysis:
       tests:
